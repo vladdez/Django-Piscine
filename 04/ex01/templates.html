@@ -1,0 +1,33 @@
+{% extends "ex01/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+            "Ex01: Display process of a static page."
+            {% endblock %}
+        </title>
+        {% block css %}
+        <link rel="styleshet" href ="{%static 'css/style1.css' %}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <h2> Static page </h2>
+        <p>
+            In Django, at least three, but more commonly four, separate files are required to display one single page. Within an app, you will need to update / modify urls.py, views.py, models.py, and an HTML template such as index.html.
+
+            When a user visits your web application by typing a URL in their browser, such as https://checkseats.com/about, Django matches the URL pattern to a view. The view determines the content for the page and collects data from a model (which is associated with a database table). The template provides the layout & styling with the end result being an HTML file sent back to the user in an HTTP response. 
+        </p>
+        <p>
+            Tags¶
+            Tags provide arbitrary logic in the rendering process.
+
+            This definition is deliberately vague. For example, a tag can output content, serve as a control structure e.g. an “if” statement or a “for” loop, grab content from a database, or even enable access to other template tags.
+
+        </p>
+        {% endblock content %}
+        {% include "ex01/nav.html" %}
+    </body>
+</html>

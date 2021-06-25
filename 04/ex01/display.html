@@ -1,0 +1,27 @@
+{% extends "ex01/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+            "Ex01: Template engine."
+            {% endblock %}
+        </title>
+        {% block css %}
+        <link rel="styleshet" href ="{%static 'css/style2.css' %}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        <h2> Template </h2>
+        <p>
+            Web frameworks need a convenient way to generate HTML. Django relies on templates. Template files contains the static parts of the desired HTML output as well as some special syntax describing how other content will be inserted.
+
+            Using the code editor, create a templates directory within the pages app and within that create the files called base.html, home.html, and about.html. In other words, your html templates should be at pages/templates/. By default, Django’s template loader will look in the templates folder to find a matching template. We could modify the loader settings but not on this project.  </p>
+        <h2> block¶ </h2>
+            Defines a block that can be overridden by child templates. See Template inheritance for more information.
+            {% endblock content %}
+        {% include "ex01/nav.html" %}
+    </body>
+</html>
