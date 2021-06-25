@@ -1,0 +1,29 @@
+.moviedex__info > img{
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+}
+.moviedex__info {
+    background: gray;
+    margin: 0 22%;
+    padding: 1% 2%;
+    border: none !important;
+    border-radius: 5px;
+    opacity: .6;
+}
+.moviedex .selected {
+    background: #3b3a86;
+    opacity: 1;
+}
+.details {
+    position: relative;
+}
+.details .poster {
+    position: absolute;
+    right: 5px;
+    top: 2.5%;
+    opacity: .6;
+}
+.details .info_block {
+    text-align: left;
+}

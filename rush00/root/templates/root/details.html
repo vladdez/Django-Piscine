@@ -1,0 +1,16 @@
+{% extends 'root/base.html' %}
+{% block content %}
+    <div class="display details battle">
+        {% if moviemon.poster != 'N/A' %}
+            <img class="poster" src="{{ moviemon.poster }}" alt="poster"/>
+        {% endif %}
+        <div class="info_block">
+            {% for text in massage %}
+                {% if text %}
+                    <div>{{ text }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+@import "clear.css";
+@import "layout.css";
+@import "plastic.css";
+@import "elements.css";
+@import "worldmap.css";
+@import "welcome.css";
+@import "battle.css";
+@import "moviedex.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@font-face {
+    font-family: 'Pokemon';
+    src: url("../fonts/Pokemon Solid.ttf");
+}
+@font-face {
+    font-family: 'Pokemon-Hollow';
+    src: url("../fonts/Pokemon Hollow.ttf");
+}
+
+body {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 16px;
+}
+.title {
+    font-family: 'Pokemon', monospace;
+}

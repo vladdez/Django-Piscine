@@ -1,0 +1,27 @@
+{% extends 'root/base.html' %}
+    {% block settings %}
+         <style>
+        :root {
+            --sizeX:{{ settings.grid_size_x }};
+            --sizeY:{{ settings.grid_size_y }};
+        }
+    </style>
+    {% endblock settings %}
+{% block content %}
+<div class="worldmap display">
+    {% for item in settings.map_list %}
+        <div {% if item.player %} class="player" {% endif %}>
+        {% if item.moviemon != None and item.player and not item.moviemon.caught %}
+            <div class="pokemon"></div>
+        {% endif %}
+        {% if item.ball and item.player %}
+            <div class="ball"></div>
+        {% endif %}
+        </div>
+    {% endfor %}
+    <div class="balls">{{ settings.balls }} moveball(s)</div>
+    <div class="info"> {% for text in settings.message %}
+        <div>{{ text }}</div>
+    {% endfor %}</div>
+</div>
+{% endblock content %}

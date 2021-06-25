@@ -1,0 +1,66 @@
+.worldmap{
+    position: relative;
+    height: 450px;
+    display: grid;
+    grid: repeat(var(--sizeX), 1fr) / repeat(var(--sizeY), 1fr);
+    background: url("../img/B062NZ-IEAAOhd9.jpg") 0 100% no-repeat;
+    background-size: contain;
+}
+.worldmap .player {
+    background: url("../img/player.png") 0 100% no-repeat;
+    background-size: contain;
+}
+.display {
+    height: 100%;
+    position: relative;
+    }
+.display > img {
+    height: 95%;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+}
+.display > div {
+    position: relative;
+    border: 1px dashed #575757;
+}
+
+.display .ball {
+    margin-left: auto;
+    width: 50%;
+    height: 50%;
+    background: url(../img/pokemon.png) 100% 100% no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+.display .pokemon {
+    margin-left: auto;
+    width: 50%;
+    height: 50%;
+    background: url(../img/monsters/monster-robots-cartoon-scary-monsters-11563234289qxptal4dqj.png) 100% 100% no-repeat;
+    background-size: contain;
+}
+.display .balls {
+    font-family: 'Itim', cursive;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    font-size: 20px;
+    color: orange;
+    border: none;
+}
+
+.display .info {
+    font-family: 'Itim', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     color: #e8cca3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    border: none;
+}

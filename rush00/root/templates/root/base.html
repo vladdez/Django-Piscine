@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title|default:'Game'}}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    {% block settings %}
+    {% endblock settings %}
+</head>
+<body>
+<div class="wrapper">
+    <div class="content element">
+        <main class="neumorphic--pressed">
+            {% block content %}
+            {% endblock content %}
+        </main>
+        {{ controls }}
+    </div>
+</div>
+</body>
+    <script src="{% static 'js/key.js' %}"></script>
+</html>
