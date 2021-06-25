@@ -1,0 +1,7 @@
+Django==3.2.2
+psycopg2-binary==2.8.6
+django-bootstrap3==15.0.0
+django-gallery==0.1
+Pillow==8.2.0
+gunicorn==20.1.0
+uWSGI==2.0.19.1
