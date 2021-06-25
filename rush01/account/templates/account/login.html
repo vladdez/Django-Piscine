@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Rush01-login</title>
+{% endblock %}
+{% block content %}
+      <h1>Rush01-Login</h1>
+      <div>
+            <form method="POST">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input type='submit' value='Submit'/>
+            </form>
+      </div>
+{% endblock %}
